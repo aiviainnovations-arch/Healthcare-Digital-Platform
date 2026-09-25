@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 700" width="1600" height="700" role="img" aria-label="Poster frame: daylight across stone and glass in a waiting room">
+  <rect width="1600" height="700" fill="#F7F5F0"/>
+  <rect x="0" y="0" width="1600" height="700" fill="#E9EFEA" opacity="0.5"/>
+  <g opacity="0.9">
+    <rect x="90" y="120" width="300" height="460" fill="#DED9D0"/>
+    <rect x="430" y="210" width="250" height="370" fill="#FFFFFF"/>
+    <rect x="720" y="60" width="380" height="520" fill="#C7D8D1" opacity="0.6"/>
+    <rect x="1140" y="240" width="370" height="340" fill="#D8C8A8" opacity="0.45"/>
+  </g>
+  <path d="M0 580h1600" stroke="#222726" stroke-opacity="0.12" stroke-width="2"/>
+  <circle cx="905" cy="320" r="120" fill="none" stroke="#FFFFFF" stroke-width="8"/>
+</svg>

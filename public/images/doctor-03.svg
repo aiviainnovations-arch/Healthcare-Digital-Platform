@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800" width="640" height="800" role="img" aria-label="Illustrated placeholder portrait">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="0.3" y2="1">
+      <stop offset="0%" stop-color="#EFEBE3"/>
+      <stop offset="100%" stop-color="#F7F5F0"/>
+    </linearGradient>
+    <pattern id="dots3" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.4" fill="#222726" opacity="0.12"/>
+    </pattern>
+  </defs>
+
+  <rect width="640" height="800" fill="url(#bg3)"/>
+  <rect width="640" height="800" fill="url(#dots3)"/>
+
+  <!-- large colour-block field, offset so it reads as art rather than a swatch -->
+  <path d="M0 0h640v520c-90 60-260 90-430 30C120 512 30 470 0 430Z" fill="#D8C8A8" opacity="0.5"/>
+
+  <!-- decorative rings, off-centre -->
+  <circle cx="470" cy="128" r="150" fill="none" stroke="#6E8790" stroke-width="1.4" opacity="0.55"/>
+  <circle cx="470" cy="128" r="104" fill="none" stroke="#8EA9A2" stroke-width="1.4" opacity="0.4"/>
+
+  <!-- collar / clothing block -->
+  <path d="M108 800c0-108 60-176 130-206l82 40 82-40c70 30 130 98 130 206Z" fill="#DED9D0"/>
+
+  <!-- head + neck -->
+  <path d="M266 520v58c0 26 18 44 54 44s54-18 54-44v-58Z" fill="#F0DCC8"/>
+  <ellipse cx="320" cy="432" rx="98" ry="112" fill="#F0DCC8"/>
+
+  <!-- hair block, shape varies -->
+  <path d="M226 402c-10-96 36-166 96-166 66 0 104 58 100 140-18-36-56-58-100-58-40 0-76 22-96 84Z" fill="#6b4a34"/>
+
+  <!-- thin accent line, a signature per card -->
+  <path d="M64 704h180" stroke="#D8C8A8" stroke-width="2" opacity="0.7"/>
+
+  <text x="64" y="748" font-family="Inter, Helvetica, Arial, sans-serif" font-size="17" letter-spacing="2.4" fill="#222726" opacity="0.7">PLACEHOLDER PORTRAIT</text>
+</svg>

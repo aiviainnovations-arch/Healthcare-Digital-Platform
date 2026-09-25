@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 700" width="1600" height="700" role="img" aria-label="Poster frame: abstract scanning rings and soft diagnostic light">
+  <rect width="1600" height="700" fill="#E9EFEA"/>
+  <g fill="none" stroke="#8EA9A2" stroke-width="2" opacity="0.65">
+    <circle cx="800" cy="350" r="280" stroke-dasharray="6 26"/>
+    <circle cx="800" cy="350" r="210" stroke-dasharray="70 22"/>
+    <circle cx="800" cy="350" r="140" stroke-dasharray="3 18"/>
+  </g>
+  <rect x="560" y="310" width="480" height="80" fill="#6E8790" opacity="0.1"/>
+  <path d="M220 350h300l24-60 32 124 26-92 20 28h180l28-44 24 44h520" fill="none" stroke="#6E8790" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+</svg>

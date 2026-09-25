@@ -1,0 +1,177 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --ivory: #f7f5f0;
+    --mist: #e9efea;
+    --sage-light: #c7d8d1;
+    --sage: #8ea9a2;
+    --slate-blue: #6e8790;
+    --sand: #d8c8a8;
+    --charcoal: #222726;
+    --rule: rgba(34, 39, 38, 0.14);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-ivory text-charcoal font-sans antialiased;
+    font-weight: 400;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  /* A faint paper grain keeps large flat colour fields (ivory, charcoal) from
+     reading as empty digital colour swatches. Barely visible, always present. */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 40;
+    pointer-events: none;
+    opacity: 0.045;
+    mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* Editorial headings keep their own rhythm rather than inheriting sans metrics. */
+  h1,
+  h2,
+  h3 {
+    @apply font-display font-normal;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background: var(--sage-light);
+    color: var(--charcoal);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--slate-blue);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  input,
+  select,
+  button,
+  textarea {
+    font: inherit;
+    color: inherit;
+  }
+}
+
+@layer components {
+  /* One shared page gutter so section paddings never fight each other. */
+  .shell {
+    width: 100%;
+    margin-inline: auto;
+    max-width: 82rem;
+    padding-inline: clamp(1.25rem, 5vw, 4.5rem);
+  }
+
+  .rule-top {
+    border-top: 1px solid var(--rule);
+  }
+
+  /* A charcoal section — used once or twice for rhythm, never as the base. */
+  .band-dark {
+    background: var(--charcoal);
+    color: var(--ivory);
+  }
+
+  .band-dark .eyebrow {
+    color: var(--sage-light);
+  }
+
+  .eyebrow {
+    @apply text-[0.7rem] uppercase tracking-wide2 text-slate-blue;
+    font-weight: 500;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-sm font-medium;
+    transition:
+      background-color 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+      color 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+      border-color 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: transform;
+  }
+
+  .btn-primary {
+    background: var(--charcoal);
+    color: var(--ivory);
+  }
+
+  .btn-primary:hover {
+    background: var(--slate-blue);
+  }
+
+  .btn-ghost {
+    border: 1px solid var(--rule);
+    color: var(--charcoal);
+    background: transparent;
+  }
+
+  .btn-ghost:hover {
+    border-color: var(--sage);
+    background: rgba(233, 239, 234, 0.6);
+  }
+
+  .field {
+    @apply w-full border-0 border-b bg-transparent pb-2.5 pt-1 text-[0.95rem];
+    border-color: var(--rule);
+    transition: border-color 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .field:focus {
+    outline: none;
+    border-color: var(--sage);
+  }
+
+  .field::placeholder {
+    color: rgba(34, 39, 38, 0.35);
+  }
+
+  /* Elements the reveal system will animate. Hidden only when JS + motion are on. */
+  .js-motion [data-reveal] {
+    opacity: 0;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .js-motion [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
