@@ -103,21 +103,21 @@ export const doctors: Doctor[] = [
     name: 'Dr. Maya Shah',
     specialty: 'Internal medicine',
     intro: 'Sees adults for everyday health concerns and long-term follow-up.',
-    portrait: '/images/doctor-01.svg',
+    portrait: `${import.meta.env.BASE_URL}images/doctor-01.svg`,
   },
   {
     id: 'arjun-mehta',
     name: 'Dr. Arjun Mehta',
     specialty: 'Cardiology',
     intro: 'Works with patients on heart health assessment and monitoring.',
-    portrait: '/images/doctor-02.svg',
+    portrait: `${import.meta.env.BASE_URL}images/doctor-02.svg`,
   },
   {
     id: 'elena-rao',
     name: 'Dr. Elena Rao',
     specialty: 'Dermatology',
     intro: 'Consults on skin concerns, from short-term flare-ups to ongoing care.',
-    portrait: '/images/doctor-03.svg',
+    portrait: `${import.meta.env.BASE_URL}images/doctor-03.svg`,
   },
 ]
 
