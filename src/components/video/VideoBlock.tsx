@@ -75,7 +75,7 @@ export function VideoBlock({ mp4, webm, poster, label, className = '' }: Props) 
 
 export const HeroVideo = (props: { className?: string }) => (
   <VideoBlock
-    poster="/images/poster-hero.svg"
+    poster={`${import.meta.env.BASE_URL}images/poster-hero.svg`}
     label="A camera moving slowly through a bright, calm clinic interior."
     className={props.className}
     // mp4="/videos/hero.mp4"
@@ -85,7 +85,7 @@ export const HeroVideo = (props: { className?: string }) => (
 
 export const ClinicExperienceVideo = (props: { className?: string }) => (
   <VideoBlock
-    poster="/images/poster-clinic.svg"
+    poster={`${import.meta.env.BASE_URL}images/poster-clinic.svg`}
     label="Daylight moving across stone and glass surfaces in a clinic waiting room."
     className={props.className}
     // mp4="/videos/clinic-experience.mp4"
@@ -95,7 +95,7 @@ export const ClinicExperienceVideo = (props: { className?: string }) => (
 
 export const MedicalTechnologyVideo = (props: { className?: string }) => (
   <VideoBlock
-    poster="/images/poster-technology.svg"
+    poster={`${import.meta.env.BASE_URL}images/poster-technology.svg`}
     label="Abstract scanning rings and soft diagnostic light on a pale surface."
     className={props.className}
     // mp4="/videos/medical-technology.mp4"
