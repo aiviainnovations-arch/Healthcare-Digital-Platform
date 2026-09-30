@@ -232,7 +232,7 @@ Before going live, update the canonical URL and `og:image` path in `index.html` 
 
 ## License
 
-Released under the [MIT License](LICENSE). Third-party libraries (React, GSAP, three.js and others) remain under their own licenses.
+Released under the [MIT LICENSE](LICENSE). Third-party libraries (React, GSAP, three.js and others) remain under their own licenses.
 
 ---
 
